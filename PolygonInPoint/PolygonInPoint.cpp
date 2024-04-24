@@ -240,3 +240,25 @@ bool two_segments_intersect(const point2d first1, const point2d last1, const poi
             last2.y >= first1.y && first1.y >= first2.y || last2.y >= last1.y && last1.y >= first2.y);
     return false;
 }
+
+bool ray_intersects_segment(const point2d first, const point2d last, const ray2d ray)
+{
+    const double angle = atan(ray.tg) / rad;
+    const double sn = floor(sin(angle * rad) * 1000) / 1000;
+    const double cs = floor(cos(angle * rad) * 1000) / 1000;
+
+    const double nom_s = sn * (ray.x - last.x) + cs * (last.y - ray.y);
+    const double denom_s = sn * (first.x - last.x) + cs * (last.y - first.y);
+    double s = nom_s / denom_s;
+
+    if (nom_s == 0)
+        s = 0;
+
+    const double nom_t = s * first.x + (1 - s) * last.x - ray.x;
+    double t = nom_t / cs;
+
+    if (nom_t == 0)
+        t = 0;
+
+    return t >= 0 && s >= 0 && s <= 1;
+}
