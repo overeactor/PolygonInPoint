@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <istream>
 struct point2d
 {
