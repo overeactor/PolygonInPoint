@@ -16,3 +16,12 @@ bool operator==(const polygon2d& first, const polygon2d& second)
 
     return true;
 }
+
+constexpr int point_max_value = 1000;
+constexpr int point_min_value = -1000;
+
+bool is_point_valid(const point2d point)
+{
+    return point.x >= point_min_value && point.x <= point_max_value && point.y >= point_min_value && point.y <=
+        point_max_value;
+}
