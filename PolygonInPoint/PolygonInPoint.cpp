@@ -122,3 +122,32 @@ data_check_result check_data(const polygon2d& polygon, const point2d point)
 
     return { true, "" };
 }
+
+bool is_point_on_segment(const point2d first, const point2d last, const point2d p)
+{
+    const bool is_segment_vertical = first.x == last.x;
+    const bool is_segment_horizontal = first.y == last.y;
+    if (is_segment_vertical)
+    {
+        if (first.x == p.x &&
+            (first.y >= p.y && p.y >= last.y ||
+                last.y >= p.y && p.y >= first.y))
+            return true;
+    }
+    else if (is_segment_horizontal)
+    {
+        if (first.y == p.y &&
+            (first.x >= p.x && p.x >= last.x ||
+                last.x >= p.x && p.x >= first.x))
+            return true;
+    }
+    else
+    {
+        if ((p.x - first.x) * (last.y - first.y) - (p.y - first.y) * (last.x - first.x) == 0 && (first.x <= p.x && p.x
+            <= last.x || last.x <= p.x && p.x <= first.x))
+            return true;
+    }
+
+
+    return false;
+}
