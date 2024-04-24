@@ -297,3 +297,22 @@ void calculate_angle_of_rotation(ray2d& ray, const polygon2d& polygon)
     if (ray.cos != 0)
         ray.tg = ray.sin / ray.cos;
 }
+
+polygon2d::polygon2d(std::vector<point2d> points) : points{ std::move(points) }
+{
+}
+
+void polygon2d::push_back(const point2d tmp)
+{
+    points.push_back(tmp);
+}
+
+int polygon2d::points_count() const
+{
+    return points.size();
+}
+
+void polygon2d::push_back(const double angle)
+{
+    angles.push_back(angle);
+}
