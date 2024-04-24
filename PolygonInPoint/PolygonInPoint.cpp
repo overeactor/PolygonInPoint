@@ -189,3 +189,54 @@ void calculate_angles_for_polygon(polygon2d& polygon, const point2d point)
         polygon.push_back(angle);
     }
 }
+
+bool two_segments_intersect(const point2d first1, const point2d last1, const point2d first2, const point2d last2)
+{
+    const int a1 = first1.y - last1.y;
+    const int b1 = last1.x - first1.x;
+    const int c1 = first1.x * last1.y - last1.x * first1.y;
+
+    const int coef1 = a1 * first2.x + b1 * first2.y + c1;
+    const int coef2 = a1 * last2.x + b1 * last2.y + c1;
+
+    const int a2 = first2.y - last2.y;
+    const int b2 = last2.x - first2.x;
+    const int c2 = first2.x * last2.y - last2.x * first2.y;
+
+    const int coef3 = a2 * first1.x + b2 * first1.y + c2;
+    const int coef4 = a2 * last1.x + b2 * last1.y + c2;
+
+    if (coef1 >= 0 && coef2 < 0 && coef3 >= 0 && coef4 < 0 || //11
+        coef1 <= 0 && coef2 > 0 && coef3 >= 0 && coef4 < 0 ||
+        coef1 >= 0 && coef2 < 0 && coef3 <= 0 && coef4 > 0 ||
+        coef1 <= 0 && coef2 > 0 && coef3 <= 0 && coef4 > 0 ||
+
+        coef1 >= 0 && coef2 < 0 && coef3 > 0 && coef4 <= 0 || //12
+        coef1 <= 0 && coef2 > 0 && coef3 > 0 && coef4 <= 0 ||
+        coef1 >= 0 && coef2 < 0 && coef3 < 0 && coef4 >= 0 ||
+        coef1 <= 0 && coef2 > 0 && coef3 < 0 && coef4 >= 0 ||
+
+        coef1 > 0 && coef2 <= 0 && coef3 >= 0 && coef4 < 0 || //21
+        coef1 < 0 && coef2 >= 0 && coef3 >= 0 && coef4 < 0 ||
+        coef1 > 0 && coef2 <= 0 && coef3 <= 0 && coef4 > 0 ||
+        coef1 < 0 && coef2 >= 0 && coef3 <= 0 && coef4 > 0 ||
+
+        coef1 > 0 && coef2 <= 0 && coef3 > 0 && coef4 <= 0 || //22
+        coef1 < 0 && coef2 >= 0 && coef3 > 0 && coef4 <= 0 ||
+        coef1 > 0 && coef2 <= 0 && coef3 < 0 && coef4 >= 0 ||
+        coef1 < 0 && coef2 >= 0 && coef3 < 0 && coef4 >= 0)
+
+        return true;
+
+
+    if (coef1 == 0 && coef2 == 0 && coef3 == 0 && coef4 == 0)
+        return (first1.x >= first2.x && first2.x >= last1.x || first1.x >= last2.x && last2.x >= last1.x ||
+            first2.x >= first1.x && first1.x >= last2.x || first2.x >= last1.x && last1.x >= last2.x ||
+            last1.x >= first2.x && first2.x >= first1.x || last1.x >= last2.x && last2.x >= first1.x ||
+            last2.x >= first1.x && first1.x >= first2.x || last2.x >= last1.x && last1.x >= first2.x) &&
+        (first1.y >= first2.y && first2.y >= last1.y || first1.y >= last2.y && last2.y >= last1.y ||
+            first2.y >= first1.y && first1.y >= last2.y || first2.y >= last1.y && last1.y >= last2.y ||
+            last1.y >= first2.y && first2.y >= first1.y || last1.y >= last2.y && last2.y >= first1.y ||
+            last2.y >= first1.y && first1.y >= first2.y || last2.y >= last1.y && last1.y >= first2.y);
+    return false;
+}
