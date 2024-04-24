@@ -1,4 +1,4 @@
-﻿#include "PolygonInPoint.h"
+#include "PolygonInPoint.h"
 
 #include <algorithm>
 #include <functional>
@@ -59,7 +59,7 @@ bool any_polygon_sides_intersect(const polygon2d& polygon)
         for (int j = 0; j <= count - 2; j++)
         {
             if (two_segments_intersect(polygon.points[i], polygon.points[i + 1],
-                polygon.points[j], polygon.points[j + 1])
+                                       polygon.points[j], polygon.points[j + 1])
                 && i != j && abs(i - j) != 1)
             {
                 return true;
@@ -70,7 +70,7 @@ bool any_polygon_sides_intersect(const polygon2d& polygon)
     for (int i = 1; i <= count - 3; i++)
     {
         if (two_segments_intersect(polygon.points[0], polygon.points[count - 1],
-            polygon.points[i], polygon.points[i + 1]))
+                                   polygon.points[i], polygon.points[i + 1]))
         {
             return true;
         }
@@ -100,9 +100,9 @@ data_check_result check_data(const polygon2d& polygon, const point2d point)
     }
 
     if (const auto not_valid_point_iter =
-        std::find_if(polygon.points.begin(),
-            polygon.points.end(),
-            std::not_fn(is_point_valid));
+            std::find_if(polygon.points.begin(),
+                         polygon.points.end(),
+                         std::not_fn(is_point_valid));
         not_valid_point_iter != polygon.points.end())
     {
         return {
@@ -158,7 +158,7 @@ bool is_point_on_segment(const point2d first, const point2d last, const point2d 
 bool is_point_on_edge_of_polygon(const polygon2d& polygon, const point2d point)
 {
     if (is_point_on_segment(polygon.points[0],
-        polygon.points[polygon.points_count() - 1], point))
+                            polygon.points[polygon.points_count() - 1], point))
         return true;
 
     for (int i = 0; i < polygon.points_count() - 1; i++)
@@ -190,6 +190,7 @@ void calculate_angles_for_polygon(polygon2d& polygon, const point2d point)
         polygon.push_back(angle);
     }
 }
+
 
 bool two_segments_intersect(const point2d first1, const point2d last1, const point2d first2, const point2d last2)
 {
@@ -232,15 +233,16 @@ bool two_segments_intersect(const point2d first1, const point2d last1, const poi
 
     if (coef1 == 0 && coef2 == 0 && coef3 == 0 && coef4 == 0)
         return (first1.x >= first2.x && first2.x >= last1.x || first1.x >= last2.x && last2.x >= last1.x ||
-            first2.x >= first1.x && first1.x >= last2.x || first2.x >= last1.x && last1.x >= last2.x ||
-            last1.x >= first2.x && first2.x >= first1.x || last1.x >= last2.x && last2.x >= first1.x ||
-            last2.x >= first1.x && first1.x >= first2.x || last2.x >= last1.x && last1.x >= first2.x) &&
-        (first1.y >= first2.y && first2.y >= last1.y || first1.y >= last2.y && last2.y >= last1.y ||
-            first2.y >= first1.y && first1.y >= last2.y || first2.y >= last1.y && last1.y >= last2.y ||
-            last1.y >= first2.y && first2.y >= first1.y || last1.y >= last2.y && last2.y >= first1.y ||
-            last2.y >= first1.y && first1.y >= first2.y || last2.y >= last1.y && last1.y >= first2.y);
+                first2.x >= first1.x && first1.x >= last2.x || first2.x >= last1.x && last1.x >= last2.x ||
+                last1.x >= first2.x && first2.x >= first1.x || last1.x >= last2.x && last2.x >= first1.x ||
+                last2.x >= first1.x && first1.x >= first2.x || last2.x >= last1.x && last1.x >= first2.x) &&
+            (first1.y >= first2.y && first2.y >= last1.y || first1.y >= last2.y && last2.y >= last1.y ||
+                first2.y >= first1.y && first1.y >= last2.y || first2.y >= last1.y && last1.y >= last2.y ||
+                last1.y >= first2.y && first2.y >= first1.y || last1.y >= last2.y && last2.y >= first1.y ||
+                last2.y >= first1.y && first1.y >= first2.y || last2.y >= last1.y && last1.y >= first2.y);
     return false;
 }
+
 
 bool ray_intersects_segment(const point2d first, const point2d last, const ray2d ray)
 {
@@ -304,7 +306,11 @@ bool operator==(const ray2d first, const ray2d second)
     return first.x == second.x && first.y == second.y && abs(first.angle - second.angle) <= 0.01;
 }
 
-polygon2d::polygon2d(std::vector<point2d> points) : points{ std::move(points) }
+polygon2d::polygon2d(std::vector<point2d> points): points{std::move(points)}
+{
+}
+
+polygon2d::polygon2d(std::vector<double> angles) : angles{std::move(angles)}
 {
 }
 
@@ -339,9 +345,9 @@ bool is_point_inside_polygon(std::vector<point2d> polygon_points, const point2d 
     calculate_angles_for_polygon(my_poly, point);
 
     std::sort(my_poly.angles.begin(), my_poly.angles.end(), [](const auto first, const auto second)
-        {
-            return abs(first) > abs(second);
-        });
+    {
+        return abs(first) > abs(second);
+    });
 
     ray2d my_ray(point.x, point.y);
     calculate_angle_of_rotation(my_ray, my_poly);
