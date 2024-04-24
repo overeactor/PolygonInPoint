@@ -1,5 +1,7 @@
 ﻿#include "PolygonInPoint.h"
 
+#include <algorithm>
+#include <functional>
 #include <set>
 
 bool operator==(const polygon2d& first, const polygon2d& second)
@@ -21,6 +23,10 @@ bool operator==(const polygon2d& first, const polygon2d& second)
 
 constexpr int point_max_value = 1000;
 constexpr int point_min_value = -1000;
+const std::string point_max_value_string = std::to_string(point_max_value);
+const std::string point_min_value_string = std::to_string(point_min_value);
+constexpr int min_point_count = 3;
+constexpr int max_point_count = 50;
 
 bool is_point_valid(const point2d point)
 {
@@ -68,4 +74,51 @@ bool any_edges_intersect(const polygon2d& polygon)
     }
 
     return false;
+}
+
+data_check_result check_data(const polygon2d& polygon, const point2d point)
+{
+    if (const int count = polygon.points_count(); count < min_point_count || count > max_point_count)
+    {
+        return {
+            false,
+            "The number of points must be in the range [" + std::to_string(min_point_count) + "; " + std::to_string(
+                max_point_count) + "]"
+        };
+    }
+
+    if (!is_point_valid(point))
+    {
+        return {
+            false,
+            "The coordinates of the point must not exceed the allowed range [" + point_min_value_string + "; " +
+            point_max_value_string + "]"
+        };
+    }
+
+    if (const auto not_valid_point_iter =
+        std::find_if(polygon.points.begin(),
+            polygon.points.end(),
+            std::not_fn(is_point_valid));
+        not_valid_point_iter != polygon.points.end())
+    {
+        return {
+            false,
+            "The coordinates of the polygon's point " + std::to_string(
+                not_valid_point_iter - polygon.points.begin() + 1) +
+            " must not exceed the allowed range [" + point_min_value_string + "; " + point_max_value_string + "]"
+        };
+    }
+
+    if (any_points_match(polygon))
+    {
+        return { false, "The points of the polygon must not match" };
+    }
+
+    if (any_polygon_sides_intersect(polygon))
+    {
+        return { false, "The polygon sides must not intersect" };
+    }
+
+    return { true, "" };
 }
