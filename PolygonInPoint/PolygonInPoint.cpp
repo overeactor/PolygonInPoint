@@ -48,7 +48,7 @@ bool any_points_match(const polygon2d& polygon)
     return false;
 }
 
-bool any_edges_intersect(const polygon2d& polygon)
+bool any_polygon_sides_intersect(const polygon2d& polygon)
 {
     const int count = polygon.points_count();
     for (int i = 0; i <= count - 2; i++)
