@@ -262,3 +262,17 @@ bool ray_intersects_segment(const point2d first, const point2d last, const ray2d
 
     return t >= 0 && s >= 0 && s <= 1;
 }
+
+int count_intersects(const polygon2d& polygon, const ray2d ray)
+{
+    int count = 0;
+
+    if (ray_intersects_segment(polygon.points.front(), polygon.points.back(), ray))
+        count++;
+
+    for (int i = 0; i < polygon.points_count() - 1; i++)
+        if (ray_intersects_segment(polygon.points[i], polygon.points[i + 1], ray))
+            count++;
+
+    return count;
+}
