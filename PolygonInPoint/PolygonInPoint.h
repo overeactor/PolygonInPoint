@@ -1,4 +1,6 @@
 #pragma once
+#include <stdexcept>
+#include <string>
 #include <vector>
 #include <istream>
 struct point2d
@@ -57,4 +59,16 @@ struct ray2d
     friend bool operator==(ray2d first, ray2d second);
 };
 
+struct data_check_result
+{
+    bool is_correct;
+    std::string reason;
+};
+
+struct data_check_error final : std::invalid_argument
+{
+    using std::invalid_argument::invalid_argument;
+};
+
 bool is_point_inside_polygon(std::vector<point2d> polygon_points, point2d point);
+data_check_result check_data(const polygon2d& polygon, point2d point);
