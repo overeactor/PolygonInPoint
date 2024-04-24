@@ -79,3 +79,4 @@ bool is_point_inside_polygon(std::vector<point2d> polygon_points, point2d point)
 data_check_result check_data(const polygon2d& polygon, point2d point);
 bool is_point_on_edge_of_polygon(const polygon2d& polygon, struct point2d point);
 int count_intersects(const polygon2d& polygon, ray2d ray);
+bool ray_intersects_segment(point2d first, point2d last, ray2d ray);
