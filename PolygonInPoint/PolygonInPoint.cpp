@@ -41,3 +41,31 @@ bool any_points_match(const polygon2d& polygon)
 
     return false;
 }
+
+bool any_edges_intersect(const polygon2d& polygon)
+{
+    const int count = polygon.points_count();
+    for (int i = 0; i <= count - 2; i++)
+    {
+        for (int j = 0; j <= count - 2; j++)
+        {
+            if (two_segments_intersect(polygon.points[i], polygon.points[i + 1],
+                polygon.points[j], polygon.points[j + 1])
+                && i != j && abs(i - j) != 1)
+            {
+                return true;
+            }
+        }
+    }
+
+    for (int i = 1; i <= count - 3; i++)
+    {
+        if (two_segments_intersect(polygon.points[0], polygon.points[count - 1],
+            polygon.points[i], polygon.points[i + 1]))
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
