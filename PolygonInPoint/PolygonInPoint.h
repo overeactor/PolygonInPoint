@@ -38,3 +38,20 @@ struct polygon2d
 
     friend bool operator==(const polygon2d& first, const polygon2d& second);
 };
+
+struct ray2d
+{
+    ray2d(const int x, const int y) : x{ x }, y{ y }
+    {
+    }
+
+
+    int x{};
+    int y{};
+    double angle{};
+    double sin{ 2 };
+    double cos{ 2 };
+    double tg{};
+
+    friend bool operator==(ray2d first, ray2d second);
+};
