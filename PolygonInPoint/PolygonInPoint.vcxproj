@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{75534933-3C4F-44B2-9587-7D9EE20FB9A6}</ProjectGuid>
+    <ProjectGuid>{44e40514-3450-47b4-a203-0f4db956bf97}</ProjectGuid>
     <RootNamespace>PolygonInPoint</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
