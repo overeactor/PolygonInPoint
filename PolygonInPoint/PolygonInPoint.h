@@ -77,3 +77,4 @@ struct data_check_error final : std::invalid_argument
 
 bool is_point_inside_polygon(std::vector<point2d> polygon_points, point2d point);
 data_check_result check_data(const polygon2d& polygon, point2d point);
+bool is_point_on_edge_of_polygon(const polygon2d& polygon, struct point2d point);
