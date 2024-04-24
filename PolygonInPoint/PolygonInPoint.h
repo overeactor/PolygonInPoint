@@ -21,3 +21,20 @@ inline std::istream& operator>>(std::istream& in, point2d& point)
     in >> point.x >> point.y;
     return in;
 }
+
+struct polygon2d
+{
+    explicit polygon2d(std::vector<point2d> points);
+    explicit polygon2d(std::vector<double> angles);
+
+    std::vector<point2d> points;
+    std::vector<double> angles;
+
+    void push_back(point2d tmp);
+
+    [[nodiscard]] int points_count() const;
+
+    void push_back(double angle);
+
+    friend bool operator==(const polygon2d& first, const polygon2d& second);
+};
