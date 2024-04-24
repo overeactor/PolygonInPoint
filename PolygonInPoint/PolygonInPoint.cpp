@@ -5,6 +5,13 @@
 #include <set>
 #include <utility>
 
+
+/*!
+*\file
+*\brief File contains funtions realization
+*/
+
+
 constexpr auto rad = 0.0174533;
 
 bool operator==(const polygon2d& first, const polygon2d& second)

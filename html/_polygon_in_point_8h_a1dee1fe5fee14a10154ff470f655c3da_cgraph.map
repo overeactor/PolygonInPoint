@@ -1,0 +1,14 @@
+<map id="check_data" name="check_data">
+<area shape="rect" id="Node000001" title="Checks if input data is correct." alt="" coords="5,81,94,108"/>
+<area shape="rect" id="Node000002" href="$_polygon_in_point_8cpp.html#abe29b06c1a7c3699e8a3b39fd4d6090f" title=" " alt="" coords="173,5,300,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,78,141,48,176,35,177,40,143,53,79,83"/>
+<area shape="rect" id="Node000003" href="$_polygon_in_point_8cpp.html#a3c68150182b894f917a3fa1c76400e5c" title=" " alt="" coords="142,107,331,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="94,98,127,102,126,108,94,103"/>
+<area shape="rect" id="Node000004" href="$structpolygon2d.html#ae84f37e739545ba6495d47a3a808b1c9" title=" " alt="" coords="379,56,541,83"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="94,89,364,73,364,78,94,95"/>
+<area shape="rect" id="Node000006" href="$_polygon_in_point_8cpp.html#ae3a8a38799a46219904289562a5e1526" title=" " alt="" coords="187,157,286,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="73,106,106,125,143,143,173,153,171,158,141,148,103,130,71,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,103,382,84,384,89,299,109"/>
+<area shape="rect" id="Node000005" href="$_polygon_in_point_8cpp.html#ac67ec6a4225af52b57cbc70aec73c4bd" title="Checks if two segment intersect." alt="" coords="379,107,541,133"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="331,117,363,117,363,123,331,123"/>
+</map>

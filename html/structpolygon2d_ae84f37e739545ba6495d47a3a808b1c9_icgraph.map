@@ -1,0 +1,18 @@
+<map id="polygon2d::points_count" name="polygon2d::points_count">
+<area shape="rect" id="Node000001" title=" " alt="" coords="735,81,897,108"/>
+<area shape="rect" id="Node000002" href="$_polygon_in_point_8cpp.html#a3c68150182b894f917a3fa1c76400e5c" title=" " alt="" coords="497,5,687,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="759,78,686,53,633,35,635,30,688,48,761,73"/>
+<area shape="rect" id="Node000003" href="$_polygon_in_point_8cpp.html#a1fea91cf1a40bbed953e588599640572" title="Checks if input data is correct." alt="" coords="336,53,424,80"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="719,91,424,72,424,67,720,86"/>
+<area shape="rect" id="Node000006" href="$_polygon_in_point_8cpp.html#aa2989b41bba1292ee30860d699622eda" title="Counts the quantity of intersactions between ray and polygon." alt="" coords="533,107,651,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="719,108,652,116,651,111,719,103"/>
+<area shape="rect" id="Node000007" href="$_polygon_in_point_8cpp.html#ac72851f7c394c166d2f6390488e331a2" title="Checks if the point is on the edge of the polygon." alt="" coords="310,155,449,197"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="773,117,732,134,687,148,625,160,562,169,450,177,450,172,562,164,624,155,686,143,731,129,771,112"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,39,425,59,424,54,515,33"/>
+<area shape="rect" id="Node000004" href="$_polygon_in_point_8cpp.html#a9a368661b1579585f4cdd1cc6a3111f6" title="Checks if the point is inside the polygon." alt="" coords="103,104,262,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="321,84,238,106,237,101,320,79"/>
+<area shape="rect" id="Node000005" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,104,55,131"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,120,55,120,55,115,87,115"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="518,122,263,121,263,115,518,117"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="294,153,229,134,231,129,296,148"/>
+</map>

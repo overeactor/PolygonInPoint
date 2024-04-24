@@ -1,0 +1,34 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,157,55,184"/>
+<area shape="rect" id="Node000002" href="$_polygon_in_point_8cpp.html#a9a368661b1579585f4cdd1cc6a3111f6" title="Checks if the point is inside the polygon." alt="" coords="103,157,262,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,168,87,168,87,173,55,173"/>
+<area shape="rect" id="Node000003" href="$_polygon_in_point_8cpp.html#aaf7bb4600479675185036089bddd0111" title="Calculates angle of rotation." alt="" coords="316,24,444,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="199,155,247,118,309,76,316,72,319,77,311,81,250,122,202,159"/>
+<area shape="rect" id="Node000004" href="$_polygon_in_point_8cpp.html#aba44f2e05675df73ca2c5cf9b3d38c4a" title="Calculates angles quanity of polygon." alt="" coords="310,91,449,133"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="229,154,294,135,296,140,231,159"/>
+<area shape="rect" id="Node000006" href="$_polygon_in_point_8cpp.html#a1fea91cf1a40bbed953e588599640572" title="Checks if input data is correct." alt="" coords="336,157,424,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="262,168,320,168,320,173,262,173"/>
+<area shape="rect" id="Node000012" href="$_polygon_in_point_8cpp.html#aa2989b41bba1292ee30860d699622eda" title="Counts the quantity of intersactions between ray and polygon." alt="" coords="321,259,438,285"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="212,182,340,249,338,254,209,187"/>
+<area shape="rect" id="Node000014" href="$_polygon_in_point_8cpp.html#ac72851f7c394c166d2f6390488e331a2" title="Checks if the point is on the edge of the polygon." alt="" coords="310,352,449,395"/>
+<area shape="poly" id="edge15_Node000002_Node000014" title=" " alt="" coords="199,183,349,339,345,343,195,186"/>
+<area shape="rect" id="Node000005" href="$structpolygon2d.html#a7aa8b58df1f5bd1fb36ba100b252b65a" title=" " alt="" coords="516,5,668,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="427,88,448,76,471,58,496,42,512,35,514,40,499,46,474,63,451,81,430,92"/>
+<area shape="rect" id="Node000007" href="$_polygon_in_point_8cpp.html#abe29b06c1a7c3699e8a3b39fd4d6090f" title=" " alt="" coords="528,56,656,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="423,156,448,143,462,131,471,118,480,105,496,92,512,84,515,89,499,97,484,109,475,121,466,134,451,148,426,160"/>
+<area shape="rect" id="Node000008" href="$_polygon_in_point_8cpp.html#a3c68150182b894f917a3fa1c76400e5c" title=" " alt="" coords="497,107,687,133"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="424,158,517,135,519,140,425,163"/>
+<area shape="rect" id="Node000009" href="$structpolygon2d.html#ae84f37e739545ba6495d47a3a808b1c9" title=" " alt="" coords="735,208,897,235"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="424,170,543,178,687,193,737,202,736,207,686,199,543,183,424,175"/>
+<area shape="rect" id="Node000011" href="$_polygon_in_point_8cpp.html#ae3a8a38799a46219904289562a5e1526" title=" " alt="" coords="543,208,641,235"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="425,179,528,204,527,209,424,184"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="640,131,688,150,780,197,777,202,686,154,638,136"/>
+<area shape="rect" id="Node000010" href="$_polygon_in_point_8cpp.html#ac67ec6a4225af52b57cbc70aec73c4bd" title="Checks if two segment intersect." alt="" coords="735,107,897,133"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="687,117,719,117,719,123,687,123"/>
+<area shape="poly" id="edge13_Node000012_Node000009" title=" " alt="" coords="438,267,553,258,686,244,736,236,737,241,687,249,554,264,439,272"/>
+<area shape="rect" id="Node000013" href="$_polygon_in_point_8cpp.html#a9f2fba0b543635c61fd96841386d0e45" title="Checks if the ray intersects segment between the points." alt="" coords="512,309,672,336"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="439,283,519,303,518,308,438,289"/>
+<area shape="poly" id="edge17_Node000014_Node000009" title=" " alt="" coords="450,378,503,379,564,376,626,366,686,346,719,325,750,299,795,246,799,249,753,303,723,329,688,350,628,371,564,381,503,385,450,383"/>
+<area shape="rect" id="Node000015" href="$_polygon_in_point_8cpp.html#a0ad57ad86864f28a16a4f880158ba873" title="Checks if the point is inside the segment." alt="" coords="520,411,664,437"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="450,387,518,404,517,409,449,393"/>
+</map>

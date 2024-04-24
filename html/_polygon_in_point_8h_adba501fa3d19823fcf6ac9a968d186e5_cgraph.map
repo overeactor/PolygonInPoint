@@ -1,0 +1,7 @@
+<map id="count_intersects" name="count_intersects">
+<area shape="rect" id="Node000001" title="Counts the quantity of intersactions between ray and polygon." alt="" coords="5,31,123,57"/>
+<area shape="rect" id="Node000002" href="$structpolygon2d.html#ae84f37e739545ba6495d47a3a808b1c9" title=" " alt="" coords="171,5,333,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,33,155,29,156,34,123,39"/>
+<area shape="rect" id="Node000003" href="$_polygon_in_point_8cpp.html#a9f2fba0b543635c61fd96841386d0e45" title="Checks if the ray intersects segment between the points." alt="" coords="172,56,332,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,49,157,54,156,59,123,55"/>
+</map>

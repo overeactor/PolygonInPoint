@@ -5,9 +5,29 @@
 
 #include "PolygonInPoint.h"
 
+/*!
+*\file
+*\brief File main function that calls functions from PolygonInPoint.cpp
+*\mainpage Documentation for program "PolygonInPoint"
+
+There is given a set of variable types used in the main code without defining classes, as well as a set of method calls and their arguments called in the main code. 
+Generate interface code for the variable classes declared in this functions based on operations on given variables. 
+That means that the method call must be mapped into the method definition, where the formal parameters must be the passed values.
+Take into account ambiguities when defining methods and fields based on access to them, as well as the possibility of overloading methods.
+Consider the operators and their types that can be inferred.
+
+Sample program start
+*\code
+PolygonInPoint.exe 1.txt
+*\endcode
+*\author Bebahani A.A.
+*\date April 2024
+*\version 1.0
+*/
+
 int main()
 {
-    setlocale(LC_CTYPE, "rus");
+    setlocale(LC_ALL, "UTF-8");
 
     std::string path_to_file;
 

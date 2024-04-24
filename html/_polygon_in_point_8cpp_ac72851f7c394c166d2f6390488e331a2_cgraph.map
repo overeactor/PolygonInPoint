@@ -1,0 +1,7 @@
+<map id="is_point_on_edge_of_polygon" name="is_point_on_edge_of_polygon">
+<area shape="rect" id="Node000001" title="Checks if the point is on the edge of the polygon." alt="" coords="5,23,145,65"/>
+<area shape="rect" id="Node000002" href="$_polygon_in_point_8cpp.html#a0ad57ad86864f28a16a4f880158ba873" title="Checks if the point is inside the segment." alt="" coords="202,5,346,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,32,186,27,187,32,145,38"/>
+<area shape="rect" id="Node000003" href="$structpolygon2d.html#ae84f37e739545ba6495d47a3a808b1c9" title=" " alt="" coords="193,56,355,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,50,177,54,177,60,145,56"/>
+</map>

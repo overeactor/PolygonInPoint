@@ -1,0 +1,9 @@
+<map id="polygon2d::push_back" name="polygon2d::push_back">
+<area shape="rect" id="Node000001" title=" " alt="" coords="497,13,649,40"/>
+<area shape="rect" id="Node000002" href="$_polygon_in_point_8cpp.html#aba44f2e05675df73ca2c5cf9b3d38c4a" title="Calculates angles quanity of polygon." alt="" coords="310,5,449,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,29,450,29,450,24,482,24"/>
+<area shape="rect" id="Node000003" href="$_polygon_in_point_8cpp.html#a9a368661b1579585f4cdd1cc6a3111f6" title="Checks if the point is inside the polygon." alt="" coords="103,13,262,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="294,29,263,29,263,24,294,24"/>
+<area shape="rect" id="Node000004" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
+</map>
