@@ -9,3 +9,8 @@ inline bool operator==(const point2d first, const point2d second)
 {
     return first.x == second.x && first.y == second.y;
 }
+
+inline bool operator!=(const point2d first, const point2d second)
+{
+    return !(first == second);
+}
