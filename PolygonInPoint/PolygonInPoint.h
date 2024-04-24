@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <istream>
+#include <tuple>
+
 struct point2d
 {
     int x;
