@@ -56,3 +56,5 @@ struct ray2d
 
     friend bool operator==(ray2d first, ray2d second);
 };
+
+bool is_point_inside_polygon(std::vector<point2d> polygon_points, point2d point);
