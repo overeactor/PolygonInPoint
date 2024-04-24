@@ -151,3 +151,18 @@ bool is_point_on_segment(const point2d first, const point2d last, const point2d 
 
     return false;
 }
+
+bool is_point_on_edge_of_polygon(const polygon2d& polygon, const point2d point)
+{
+    if (is_point_on_segment(polygon.points[0],
+        polygon.points[polygon.points_count() - 1], point))
+        return true;
+
+    for (int i = 0; i < polygon.points_count() - 1; i++)
+    {
+        if (is_point_on_segment(polygon.points[i], polygon.points[i + 1], point))
+            return true;
+    }
+
+    return false;
+}
